@@ -1,33 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Baloo+Tamma+2:wght@400..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Add this to your global CSS file */
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px); /* Adjust the blur amount as needed */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+}
+
+*{
+  font-family: "LINE Seed Sans TH", sans-serif;
+  font-family: "Baloo Tamma 2", system-ui;
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  font-family: "LINE Seed Sans TH", sans-serif;
+  --toastify-font-family: "LINE Seed Sans TH", sans-serif;
+  overflow-x: hidden;
+  overflow-y: visible;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url(https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7.3.0/fonts/LINESeedSansTH/LINESeedSansTH-Thin.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url(https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7.3.0/fonts/LINESeedSansTH/LINESeedSansTH-Regular.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url(https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7.3.0/fonts/LINESeedSansTH/LINESeedSansTH-Bold.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url(https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7.3.0/fonts/LINESeedSansTH/LINESeedSansTH-ExtraBold.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url(https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7.3.0/fonts/LINESeedSansTH/LINESeedSansTH-Black.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+.baloo-tamma-2 {
+  font-family: "Baloo Tamma 2", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.amaranth-regular {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amaranth-bold {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.amaranth-regular-italic {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.amaranth-bold-italic {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*
+ *  STYLE 4
+ */
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #0f4873;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #0f4873;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #010920;
+
+}
+
