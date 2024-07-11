@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Activeslider from "./activeslider";
 import yt from "@public/web1.png"
 export default function project() {
   return (

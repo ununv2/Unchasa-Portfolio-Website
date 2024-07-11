@@ -1,6 +1,6 @@
 export default function Experience() {
   return (
-<div
+    <div
       className="grid grid-row-3 w-full h-full p-14"
       style={{ gridTemplateRows: "3fr 0fr 9fr" }}
     >
@@ -15,7 +15,10 @@ export default function Experience() {
         <h1 className="font-bold">2006</h1>
         <h1>Born</h1>
         <h1 className="font-bold">2017</h1>
-        <h1>International Singapore Maths Competition (ISMC) 2017 Silver Medal Award</h1>
+        <h1>
+          International Singapore Maths Competition (ISMC) 2017 Silver Medal
+          Award
+        </h1>
         <h1 className="font-bold">2022</h1>
         <h1>Bangkok Entreprenuer Student Tryout 2022 Best Validation Award</h1>
         <h1 className="font-bold">2023</h1>
@@ -23,11 +26,7 @@ export default function Experience() {
         <h1 className="font-bold">2024</h1>
         <h1>Started Learning Web Development</h1>
         <h1>Deployed First Website</h1>
-
-
-
-        
       </div>
     </div>
-  )
+  );
 }
