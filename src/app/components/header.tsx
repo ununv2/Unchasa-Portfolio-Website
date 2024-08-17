@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Logo from "@public/tsuki.png";
+import Logo from "@public/logoweb.png";
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -39,13 +40,13 @@ export default function Header() {
         <div className="w-full md:w-[50%]">
           <ul className="flex flex-row justify-around items-center text-[22px] h-[3em] bg-gradient-to-r from-cyan-400/20 bg-opacity-20 backdrop-blur-sm rounded-[20px] shadow-[0_20px_30px_-15px_rgba(0,0,0,0.6)]">
             <li className="cursor-pointer">
-              <a href="">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li className="cursor-pointer">
-              <a href="">About Me</a>
+              <Link href="#about">About Me</Link>
             </li>
             <li className="cursor-pointer">
-              <a href="">Projects</a>
+              <Link href="#project">Projects</Link>
             </li>
             <li className="cursor-pointer">
               <a href="">Resume</a>

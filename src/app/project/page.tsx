@@ -1,7 +1,7 @@
-import Activeslider from "./activeslider"
+import Activeslider from "../components/activeslider"
 export default function Project2() {
   return (
-    <div className="w-screen h-screen" style={{backgroundImage: "url(main-bg.jpg)", backgroundPositionY: '-672px'}}>
+    <div id="project" className="w-screen h-screen" style={{backgroundImage: "url(main-bg.jpg)", backgroundPositionY: '-672px'}}>
         {/* //WHOLE SCREEN MAKE CENTER */}
         <div data-aos="fade-up" className="w-full h-full">
             <div className="text-center text-[2em] sm:text-[3em] md:text-[5em] leading-tight font-semibold text-white drop-shadow-lg ">

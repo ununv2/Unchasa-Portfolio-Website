@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
-import pfp from "@public/am.png";
+import pfp from "@public/profilepic.jpg";
 import { useState } from "react";
-import Profile from "./profile";
-import Experience from "./experience";
-import Education from "./education";
+import Profile from "../components/profile";
+import Experience from "../components/experience";
+import Education from "../components/education";
 import bg from "@public/reversemain.png";
 
 export default function About() {
-  const [openProfile, setOpenProfile] = useState<boolean>(false);
+  const [openProfile, setOpenProfile] = useState<boolean>(true);
   const [openExperience, setOpenExperience] = useState<boolean>(false);
   const [openEducation, setOpenEducation] = useState<boolean>(false);
 
@@ -31,24 +31,42 @@ export default function About() {
   };
 
   return (
-    // Whole Screen
-    <div className="w-screen h-screen" style={{ backgroundImage: "url(reversemain.png)" }}>
+    <div
+      id="about"
+      className="w-screen h-screen"
+      style={{ backgroundImage: "url(reversemain.png)" }}
+    >
       {/* Whole Screen Make Center */}
       <div className="flex w-full h-full justify-center items-center">
         {/* GLASS Screen */}
-        <div data-aos="zoom-out-up" className="flex justify-start items-start w-[70%] h-[85%] rounded-[3em] bg-gradient-to-r from-cyan-400/10 bg-opacity-20 backdrop-blur-md backdrop-filter shadow-[-8px_-10px_14px_-15px_rgba(0,255,255,1)] ">
+        <div
+          data-aos="zoom-out-up"
+          className="flex justify-start items-start w-[70%] h-[85%] rounded-[3em] bg-gradient-to-r from-cyan-400/10 bg-opacity-20 backdrop-blur-md backdrop-filter shadow-[-8px_-10px_14px_-15px_rgba(0,255,255,1)] "
+        >
           {/* 2 COLUMNS */}
-          <div className="grid grid-cols-2 w-full h-full" style={{ gridTemplateColumns: "2fr 5fr" }}>
+          <div
+            className="grid grid-cols-2 w-full h-full"
+            style={{ gridTemplateColumns: "2fr 5fr" }}
+          >
             {/* LEFT COLUMN */}
             <div className="bg-white/5 shadow-2xl rounded-[3em] ">
               {/* 3 ROWS in Left Column */}
-              <div className="grid grid-rows-3 w-full h-full" style={{ gridTemplateRows: "4fr 3fr 1.9fr" }}>
+              <div
+                className="grid grid-rows-3 w-full h-full"
+                style={{ gridTemplateRows: "4fr 3fr 1.9fr" }}
+              >
                 {/* 1st ROW PFP,NAME,DESCRIPTION */}
                 <div className="flex flex-col gap-4 justify-center items-center w-full">
-                  <Image className="rounded-full w-[10vw]" src={pfp} alt="pfp"></Image>
+                  <Image
+                    className="rounded-full w-[10vw]"
+                    src={pfp}
+                    alt="pfp"
+                  ></Image>
                   <div className="text-center text-white">
                     <h2>Unchasa Chen</h2>
-                    <h3 className="text-[0.7em]">Computer Engineering Student</h3>
+                    <h3 className="text-[0.7em]">
+                      Computer Engineering Student
+                    </h3>
                   </div>
                 </div>
                 {/* 2nd ROW BUTTONS */}

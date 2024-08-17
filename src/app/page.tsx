@@ -3,15 +3,15 @@ import Image from "next/image";
 import Header from "./components/header";
 import Body from "./components/body";
 import Footer from "./components/footer";
-import About from "./components/about";
 import Project from "./components/project";
-import Project2 from "./components/project2";
 import Activeslider from "./components/activeslider";
 import Homepage from "./pages/homepage";
 import Ft from "./components/ft";
 import AOS from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import About from "./about/page";
+import Project2 from "./project/page";
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -31,12 +31,12 @@ export default function Home() {
       </div>
       <div className="">123</div> */}
       <div className="-z-10 absolute w-full h-full bg-cover bg-center" style={{backgroundImage: "url(main-bg.jpg)"}}></div>
-        <Homepage></Homepage>
+        <Homepage/>
       <div>
-        <About></About>
-        <Project2></Project2>
+        <About/>
+        <Project2/>
       </div>
-      <Ft></Ft>
+      <Ft/>
     </main>
   );
 }
