@@ -13,55 +13,47 @@ export default function About() {
   const [openEducation, setOpenEducation] = useState<boolean>(false);
 
   const toggleProfile = () => {
-    setOpenProfile(!openProfile);
+    setOpenProfile(true);
     setOpenExperience(false);
     setOpenEducation(false);
   };
 
   const toggleExperience = () => {
-    setOpenExperience(!openExperience);
     setOpenProfile(false);
+    setOpenExperience(true);
     setOpenEducation(false);
   };
 
   const toggleEducation = () => {
-    setOpenEducation(!openEducation);
     setOpenProfile(false);
     setOpenExperience(false);
+    setOpenEducation(true);
   };
 
   return (
     <div
       id="about"
-      className="w-screen h-screen"
+      className="w-full h-full bg-cover bg-center py-12"
       style={{ backgroundImage: "url(reversemain.png)" }}
     >
-      {/* Whole Screen Make Center */}
       <div className="flex w-full h-full justify-center items-center">
-        {/* GLASS Screen */}
         <div
           data-aos="zoom-out-up"
-          className="flex justify-start items-start w-[70%] h-[85%] rounded-[3em] bg-gradient-to-r from-cyan-400/10 bg-opacity-20 backdrop-blur-md backdrop-filter shadow-[-8px_-10px_14px_-15px_rgba(0,255,255,1)] "
+          className="flex justify-start items-start w-[90%] sm:w-[70%] h-[85%] rounded-[3em] bg-gradient-to-r from-cyan-400/10 bg-opacity-20 backdrop-blur-md backdrop-filter shadow-[-8px_-10px_14px_-15px_rgba(0,255,255,1)]"
         >
-          {/* 2 COLUMNS */}
           <div
             className="grid grid-cols-2 w-full h-full"
-            style={{ gridTemplateColumns: "2fr 5fr" }}
+            style={{ gridTemplateColumns: "2fr 5fr" }} // Keeping your grid template column
           >
             {/* LEFT COLUMN */}
-            <div className="bg-white/5 shadow-2xl rounded-[3em] ">
-              {/* 3 ROWS in Left Column */}
-              <div
-                className="grid grid-rows-3 w-full h-full"
-                style={{ gridTemplateRows: "4fr 3fr 1.9fr" }}
-              >
-                {/* 1st ROW PFP,NAME,DESCRIPTION */}
-                <div className="flex flex-col gap-4 justify-center items-center w-full">
+            <div className="bg-white/5 shadow-2xl rounded-[3em] h-full">
+              <div className="grid grid-rows-3 w-full h-full">
+                <div className="flex flex-col gap-4 justify-center items-center w-full mt-10">
                   <Image
                     className="rounded-full w-[10vw]"
                     src={pfp}
                     alt="pfp"
-                  ></Image>
+                  />
                   <div className="text-center text-white">
                     <h2>Unchasa Chen</h2>
                     <h3 className="text-[0.7em]">
@@ -69,7 +61,6 @@ export default function About() {
                     </h3>
                   </div>
                 </div>
-                {/* 2nd ROW BUTTONS */}
                 <div className="flex flex-col items-center w-full justify-around text-white text-[1.2em]">
                   <div
                     onClick={toggleProfile}
@@ -101,10 +92,12 @@ export default function About() {
               </div>
             </div>
             {/* RIGHT COLUMN */}
-            <div className="">
-              {openProfile && <Profile />}
-              {openExperience && <Experience />}
-              {openEducation && <Education />}
+            <div className="h-full flex flex-col justify-between">
+              <div className="flex-grow overflow-hidden">
+                {openProfile && <Profile />}
+                {openExperience && <Experience />}
+                {openEducation && <Education />}
+              </div>
             </div>
           </div>
         </div>

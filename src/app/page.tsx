@@ -34,6 +34,8 @@ export default function Home() {
         <Homepage/>
       <div>
         <About/>
+      </div>
+      <div className="hidden sm:block">
         <Project2/>
       </div>
       <Ft/>
